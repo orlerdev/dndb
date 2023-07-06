@@ -1,11 +1,11 @@
 import getConfig from 'next/config';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
-import { db } from './db.js';
+import { db } from '@/app/api/db.js';
 
 const { serverRuntimeConfig } = getConfig();
 
-export const usersRepo = {
+export const usersDao = {
   authenticate,
   getAll,
   getById,
